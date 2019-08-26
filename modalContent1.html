@@ -1,0 +1,33 @@
+<div>
+    <div class="modal-header">
+        <h3>Add Task sa,c/lsaljsadj</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class='row form-group'>
+                <div class='col-md-2'></div>
+                <div class='col-md-3'><label>Task Name</label></div>
+                <div class='col-md-6'><input id='taskname' type='text' ng-model='taskform.name'></div>
+            </div>
+    
+            <div class='row form-group'>
+                <div class='col-md-2'></div>
+                <div class='col-md-3'><label>From Date</label></div>
+                <div class='col-md-6'><input id='fromdate'  type='date' ng-model='taskform.fromdate'></div>
+            </div>
+    
+            <div class='row form-group  '>
+                <div class='col-md-2'></div>
+                <div class='col-md-3'><label>To Date</label></div>
+                <div class='col-md-6'><input id='todate' type='date' ng-model='taskform.todate'></div>
+            </div>
+    
+            
+    
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

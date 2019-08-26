@@ -1,0 +1,45 @@
+.gantt-row-milestone {
+  font-weight: bold;
+  vertical-align: middle;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+.menu {
+  width: 140px;
+  z-index: 1;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: none;
+  transition: 0.2s display ease-in;
+  background: white;
+}
+
+.menu-options {
+  list-style: none;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.menu-option {
+  font-weight: 500;
+  z-index: 1;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+
+.chart {
+  top: 50%;
+  left: 50%;
+  width:40em;
+  height:20em;
+  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  margin-left: -15em; /*set to a negative number 1/2 of your width*/
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
+  position:fixed;
+  display: none;
+}

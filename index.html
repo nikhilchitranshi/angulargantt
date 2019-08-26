@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript' src="//unpkg.com/angular@^1.6.4/angular.js"></script>
+    <script type='text/javascript' src="//unpkg.com/moment@^2.18.1"></script>
+    <script type='text/javascript' src="//unpkg.com/moment-range@^3.0.3"></script>
+
+    <script type='text/javascript' src="//unpkg.com/angular-ui-tree@^2.22.5/dist/angular-ui-tree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/angular-ui-tree@^2.22.5/dist/angular-ui-tree.min.css">
+
+    <script type='text/javascript' src="//unpkg.com/angular-native-dragdrop@^1.2.2/draganddrop.js"></script>
+
+    <script type='text/javascript' src="//unpkg.com/css-element-queries@^0.4.0/src/ElementQueries.js"></script>
+    <script type='text/javascript' src="//unpkg.com/css-element-queries@^0.4.0/src/ResizeSensor.js"></script>
+
+    <script type='text/javascript' src="//unpkg.com/jsplumb@^2.3.2"></script>
+
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/font-awesome@^4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/bootstrap@^3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type='text/javascript' src="//unpkg.com/angular-gantt@latest"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/angular-gantt@latest/dist/angular-gantt.css">
+    <script data-require="ui-bootstrap@*" data-semver="2.5.0" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.5.0.js"></script>
+
+    <script type='text/javascript' src="script.js"></script>
+</head>
+
+<body>
+<div ng-app="plnkrGanttStable" ng-controller="Ctrl">
+    <div gantt data="data" api="registerApi">
+        <!-- <gantt-table columns="['model.name']"></gantt-table> -->
+        <gantt-tree></gantt-tree>
+        <gantt-groups></gantt-groups>
+        <gantt-tooltips></gantt-tooltips>
+        <gantt-bounds></gantt-bounds>
+        <gantt-progress></gantt-progress>
+        <gantt-sortable></gantt-sortable>
+        <gantt-movable></gantt-movable>
+     <!--   <gantt-draw-task></gantt-draw-task>-->
+        <gantt-resize-sensor></gantt-resize-sensor>
+        <gantt-overlap></gantt-overlap>
+        <gantt-dependencies endpoints='endPoints' read-only='false'></gantt-dependencies>
+    </div>
+
+    <div id='menu' class="menu">
+      <ul class="menu-options">
+        <li class="menu-option" ng-click="deleteTask()">Delete</li>
+        <li class="menu-option" ng-click='showChart()'>Show Chart</li>    
+      </ul>
+    </div>
+
+    <div class='chart'>
+      <img src="linechart.png">
+    </div>
+</div>
+
+
+</body>
+
+</html>
